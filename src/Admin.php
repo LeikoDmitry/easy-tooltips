@@ -50,7 +50,7 @@ class Admin
             sprintf('%s%s', static::ADMIN_SLUG, '-setting-admin')
         );
 
-        // Theme
+        # Theme
         $fieldSlug  = 'theme';
         $fieldLabel = 'Choose the theme:';
         $fieldId    = sprintf('%s_%s', static::ADMIN_SLUG, $fieldSlug);
@@ -74,7 +74,7 @@ class Admin
             ]
         );
 
-        // Position
+        # Position
         $fieldSlug  = 'position';
         $fieldLabel = 'Position:';
         $fieldId    = sprintf('%s_%s', static::ADMIN_SLUG, $fieldSlug);
@@ -97,7 +97,7 @@ class Admin
             ]
         );
 
-        // Input opacity
+        # Input opacity
         $fieldSlug  = 'opacity';
         $fieldLabel = 'Opacity:';
         $fieldId    = sprintf('%s_%s', static::ADMIN_SLUG, $fieldSlug);
@@ -115,7 +115,7 @@ class Admin
             ]
         );
 
-        // Input width
+        # Input width
         $fieldSlug  = 'max_width';
         $fieldLabel = 'Max width:';
         $fieldId    = sprintf('%s_%s', static::ADMIN_SLUG, $fieldSlug);
@@ -163,11 +163,5 @@ class Admin
         }
         $html .= '</select>';
         echo $html;
-    }
-
-    public function adminEnqueueScripts(): void
-    {
-        wp_enqueue_style('wp-color-picker');
-        wp_enqueue_script('easy-admin-script-handle', plugins_url('/assets/admin-easy-tooltips.js', EASY_TOOLTIPS_PATH), ['wp-color-picker'], false, true);
     }
 }

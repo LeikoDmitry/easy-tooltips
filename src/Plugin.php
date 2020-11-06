@@ -61,7 +61,6 @@ class Plugin
         $easyAdmin = $this->getAdmin();
         $loader->addAction('admin_menu', [$easyAdmin, 'addPluginPage']);
         $loader->addAction('admin_init', [$easyAdmin, 'pageInit']);
-        $loader->addAction('admin_enqueue_scripts', [$easyAdmin, 'adminEnqueueScripts']);
     }
 
     public function getAdmin(): Admin
