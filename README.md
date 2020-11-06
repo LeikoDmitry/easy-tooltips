@@ -45,7 +45,7 @@ Or create the html element, for example:
 <a class="easy__tooltips" title="Hello world" href="#">Some page</a>
 ```
 
-##Options
+## Options
 
 `Shortcode`:
 - title
