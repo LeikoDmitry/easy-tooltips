@@ -170,19 +170,4 @@ class Admin
         wp_enqueue_style('wp-color-picker');
         wp_enqueue_script('easy-admin-script-handle', plugins_url('/assets/admin-easy-tooltips.js', EASY_TOOLTIPS_PATH), ['wp-color-picker'], false, true);
     }
-
-    public function fixTooltipsAdminJquery(): void
-    {
-        if (isset($_GET['page']) && $_GET['page'] === sprintf('%s%s', static::ADMIN_SLUG, '-setting-admin')) {
-            ?>
-                <script>
-                    (function($){
-                        $(document).ready(function(){
-                            $('tr.motech-color-field').removeClass('motech-color-field');
-                        });
-                    })(jQuery);
-                </script>
-            <?php
-        }
-    }
 }
