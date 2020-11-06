@@ -3,7 +3,7 @@
 Easily add tooltips to your wordpress site. Tooltips will show when target element is hovered over.
 You can easily pick your tooltip color settings in `Settings > Easy Tooltips`.
 
-##Requirements
+## Requirements
 - PHP >= 7.4
 - Composer - [Install](https://getcomposer.org/doc/00-intro.md)
 
