@@ -1,0 +1,27 @@
+{
+  "name": "worpress-plugin/easy-tooltips",
+  "license": "MIT",
+  "description": "Easily add tooltips to your wordpress site. Tooltips will show when target element is hovered over. On mobile devices tooltips show when target element is tapped.",
+  "authors": [
+    {
+      "name": "Crock dev",
+      "email": "leiko.dima2013@yandex.by"
+    }
+  ],
+  "require": {
+    "monolog/monolog": "^2.1"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "laminas/laminas-coding-standard": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Easy\\Tooltip\\": "src"
+    }
+  },
+  "scripts": {
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf"
+  }
+}
