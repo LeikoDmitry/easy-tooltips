@@ -1,3 +1,4 @@
 .phpcs-cache
 .env
 vendor
+node_modules

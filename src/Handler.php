@@ -28,27 +28,20 @@ class Handler
         if (! is_admin()) {
             $options = $this->getOptions();
             wp_enqueue_script(
-                'easy_tooltips_jquery',
-                plugins_url('assets/jquery-3.5.0.min.js', $this->path),
+                'easy_tooltips_runtime',
+                plugins_url('public/build/runtime.js', $this->path),
                 [],
                 EASY_TOOLTIPS_VERSION,
                 true
             );
             wp_enqueue_script(
-                'zebra_tooltips_base',
-                plugins_url('assets/zebra_tooltips.js', $this->path),
-                ['easy_tooltips_jquery'],
+                'zebra_tooltips_app',
+                plugins_url('public/build/app.js', $this->path),
+                ['easy_tooltips_runtime'],
                 EASY_TOOLTIPS_VERSION,
                 true
             );
-            wp_enqueue_script(
-                'easy_tooltips_base',
-                plugins_url('assets/easy-tooltips.js', $this->path),
-                ['easy_tooltips_jquery', 'zebra_tooltips_base'],
-                EASY_TOOLTIPS_VERSION,
-                true
-            );
-            wp_localize_script('easy_tooltips_base', 'easyTooltipData', compact('options'));
+            wp_localize_script('zebra_tooltips_app', 'easyTooltipData', compact('options'));
             wp_enqueue_style(
                 'easy_tooltips_style',
                 plugins_url(sprintf('assets/zebra_%s_tooltips.css', $options['theme'] ?? static::DEFAULT_THEME), $this->path),
@@ -69,7 +62,7 @@ class Handler
 
     public function addShortcode($attrs, $content = null): string
     {
-        // [easy_tooltip content="I love the world" max_width="100%"][best_selling_products][/easy_tooltip]
+        # [easy_tooltip content="I love the world" max_width="100%"][best_selling_products][/easy_tooltip]
         $attrs = shortcode_atts([
             'title'     => '',
             'content'   => '',

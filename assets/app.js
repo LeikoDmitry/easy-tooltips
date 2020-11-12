@@ -8,3 +8,5 @@
         });
     });
 })(jQuery);
+require('jquery');
+require('./zebra_tooltips')
