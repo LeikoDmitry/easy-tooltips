@@ -26,5 +26,11 @@ Click the tooltip icon on your visual content editor to add the tooltip shortcod
 
 == Changelog ==
 
+= 1.1.1 =
+* Fixed bug version
+
+= 1.0.1 =
+* Fixed bug bad header 
+
 = 1.0.0 =
 * Initial version

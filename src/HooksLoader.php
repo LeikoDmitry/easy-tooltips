@@ -31,7 +31,7 @@ class HooksLoader implements LoaderInterface
             'hook'          => $hook,
             'callback'      => $callable,
             'priority'      => $priority,
-            'accepted_args' => $acceptedArgs,
+            'acceptedArgs' => $acceptedArgs,
         ];
         return $hooks;
     }
